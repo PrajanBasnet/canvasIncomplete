@@ -12,13 +12,33 @@ function Erase(){
 
 }
 
+let mouseDrag = false;
+let lastX,lasty;
+draw();
+
+canvas.addEventListener("mousedown",(event)=>{
+    mouseDrag = true;
+    let pos = getXY(canvas,event);
+    lastX = pos.x;
+    lasty = pos.y;
+});
+
+canvas.addEventListener("mouseup",(event)=>{
+    mouseDrag = false;
+    pencil = true;
+});
+
 function draw(x,y){
 if(pencil == true){
-    console.log(size.value);
+
     ctx.beginPath();
-    ctx.fillStyle = color.value;
-    ctx.arc(x,y,size.value,0, Math.PI *2 , true);
-    ctx.fill();
+    ctx.lineCap = 'round'; 
+    ctx.lineWidth = size.value; 
+    ctx.strokeStyle = color.value;
+    ctx.moveTo(lastX,lasty);
+    ctx.lineTo(x,y);
+    ctx.stroke();
+    console.log(size.value);
 }else{
     console.log(size.value);
     ctx.beginPath();
@@ -27,29 +47,21 @@ if(pencil == true){
     ctx.fill();
 }
 }
-draw();
-let mouseDrag = false;
-
-canvas.addEventListener("mousedown",(event)=>{
-    mouseDrag = true;
-});
-
-canvas.addEventListener("mouseup",(event)=>{
-    mouseDrag = false;
-    pencil = true;
-});
-
 
 canvas.addEventListener("mousemove",(event)=>{
-
+    
     if(mouseDrag == true){
+        
+    let mouseX = event.offsetX;
+    let mouseY = event.offsetY;
+    
 
-    let mouseX = event.clientX;
-    let mouseY = event.clientY;
     let pos = getXY(canvas,event);
     console.log(`${pos.x}`);
     draw(pos.x,pos.y);
-    }
+    lastX = pos.x;
+    lasty = pos.y;
+}
 })
 
 function getXY(canvas,event){
@@ -60,3 +72,6 @@ function getXY(canvas,event){
     }
 }
 
+function Rectangle(){
+    
+}
