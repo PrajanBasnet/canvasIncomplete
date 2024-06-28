@@ -3,3 +3,28 @@ border:10px solid black;
     display: block;
     margin: 0 auto;
 }
+
+.container{
+    background-color: #c3195d;
+
+}
+
+.myMain{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+
+}
+
+button{
+    background-color:#555555;
+    border: none;
+    padding: 3%;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    
+}
+button:hover{
+    background-color:#818181 ;
+}

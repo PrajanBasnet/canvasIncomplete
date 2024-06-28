@@ -72,6 +72,12 @@ function getXY(canvas,event){
     }
 }
 
-function Rectangle(){
-    
+function convertToImg(){
+    var dataUrl = canvas.toDataURL("image/png");
+    var a = document.createElement("a");
+    a.href = dataUrl;
+    a.download = 'canvas.down.jpeg';
+    a.click();
 }
+
+// let download = document.getElementById("btnDow")
