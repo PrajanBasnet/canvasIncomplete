@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="myMain">
         <canvas id="canvas" width="800" height="550">
         </canvas>
-        
+
         <div class="container">
             <input type="range" value="5" min="1" max="100" id="size">
             <button id="erase" onclick="Erase()">Erase</button>
+            <button id="penCl" onclick="PencilActivate()">Pencil</button>
             <input type="color" name="myClr" id="color">
+
             <button onclick="convertToImg()" id="btnDow">Download</button>
         </div>
-        </div>
-<script src="main.js"></script>
+    </div>
+    <script src="main.js"></script>
 
 </body>
+
 </html>

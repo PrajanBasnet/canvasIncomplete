@@ -4,12 +4,15 @@ const ctx = canvas.getContext("2d");
 const size = document.querySelector("#size");
 const erase = document.querySelector("#erase");
 const color = document.querySelector("#color");
+const penCIL = document.querySelector("#penCl");
 
 let pencil = true;
 
 function Erase(){
     pencil = false;
-
+}
+function PencilActivate(){
+    pencil = true;
 }
 
 let mouseDrag = false;
@@ -25,8 +28,9 @@ canvas.addEventListener("mousedown",(event)=>{
 
 canvas.addEventListener("mouseup",(event)=>{
     mouseDrag = false;
-    pencil = true;
+    // pencil = true;
 });
+
 
 function draw(x,y){
 if(pencil == true){
