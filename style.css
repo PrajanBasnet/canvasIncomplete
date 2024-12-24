@@ -1,30 +1,73 @@
-#canvas{
-border:10px solid black;
+#canvas {
+    background-color: white;
+    border: 4px solid rgb(29, 25, 25);
     display: block;
     margin: 0 auto;
-}
-
-.container{
-    background-color: #c3195d;
 
 }
 
-.myMain{
-    display: grid;
+.container {
+    background-color: #e3e3e3;
+    width: 100%;
+}
+
+.myMain {
+
+    /* display: grid;
     justify-content: center;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto; */
+    display: flex;
+    flex-direction: row;
 
 }
 
-button{
-    background-color:#555555;
+button {
+    background-color: #555555;
     border: none;
     padding: 3%;
     color: white;
     font-size: 18px;
     text-align: center;
-    
+    border-radius: 8px;
+
 }
-button:hover{
-    background-color:#818181 ;
+
+button:hover {
+    background-color: #818181;
+}
+
+
+
+
+@media only screen and (max-width:1400px) {
+    #canvas {
+        width: 900px;
+
+
+    }
+}
+
+@media only screen and (max-width:900px) {
+    #canvas {
+        width: 600px;
+
+
+    }
+
+
+}
+
+@media only screen and (max-width:900px) {
+    #canvas {
+        width: 600px;
+
+
+    }
+}
+
+.roundCursor {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #fff;
+    border-radius: 50%;
 }

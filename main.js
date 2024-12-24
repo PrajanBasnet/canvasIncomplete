@@ -8,12 +8,20 @@ const penCIL = document.querySelector("#penCl");
 
 let pencil = true;
 
+// Tools
 function Erase(){
     pencil = false;
+    url = "tst.png";
+    canvas.style.cursor = ` url('img/Untitled 1.png'), pointer`;
 }
 function PencilActivate(){
     pencil = true;
 }
+
+function rectangleActivate(){
+
+}
+
 
 let mouseDrag = false;
 let lastX,lasty;
@@ -85,3 +93,4 @@ function convertToImg(){
 }
 
 // let download = document.getElementById("btnDow")
+
