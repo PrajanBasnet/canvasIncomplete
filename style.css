@@ -66,8 +66,6 @@ button:hover {
 }
 
 .roundCursor {
-    width: 30px;
-    height: 30px;
-    border: 2px solid #fff;
-    border-radius: 50%;
+    height: 300px;
+    width: 400px;
 }
